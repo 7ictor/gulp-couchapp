@@ -1,17 +1,18 @@
 {
   "name": "gulp-couchapp",
   "version": "0.1.0",
-  "description": "Gulp extension for installing couchapps.",
-  "main": "./index.js",
+  "description": "Gulp extension for installing CouchApps.",
+  "main": "index.js",
   "scripts": {
     "test": ""
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/7ictor/gulp-couchapp.git"
+    "url": "git://github.com/7ictor/gulp-couchapp.git"
   },
   "keywords": [
     "gulpplugin",
+    "couchdb",
     "couchapp"
   ],
   "author": {
@@ -25,8 +26,8 @@
   },
   "homepage": "https://github.com/7ictor/gulp-couchapp#readme",
   "dependencies": {
-    "couchapp": "^0.11.0",
-    "gulp-util": "^3.0.6",
-    "through2": "^2.0.0"
+    "couchapp": "^0.11.1",
+    "gulp-util": "^3.0.7",
+    "through2": "^2.0.1"
   }
 }
