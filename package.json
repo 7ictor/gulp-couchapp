@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/7ictor/gulp-couchapp#readme",
   "dependencies": {
-    "couchapp": "^0.11.1",
+    "couchapp": "~0.11.0",
     "gulp-util": "^3.0.7",
     "through2": "^2.0.1"
   }
