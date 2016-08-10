@@ -59,7 +59,7 @@ function pushCouchapp(dbName, opts) {
 
   return through.obj(function (file, enc, cb) {
     var ddocObj = require(file.path)
-    var url = dbName.test(/^http/) ? dbName : buildURL(dbName, opts);
+    var url = /^https?:\/\//.test(dbName) ? dbName : buildURL(dbName, opts);
 
     if (file.isNull()) {
       return cb(null, file)
