@@ -1,5 +1,5 @@
 # gulp-couchapp
-Gulp extension for installing couchapps.
+Gulp extension for installing CouchApps.
 ## Install
     npm install gulp-couchapp --save
 ## Usage
@@ -7,16 +7,20 @@ Gulp extension for installing couchapps.
 var couchapp = require('gulp-couchapp');
 
 gulp.task('push', function () {
-  return gulp.src('couchapp.js')
-    .pipe(couchapp.push('test', options));
+  return gulp.src('app.js')
+    .pipe(couchapp.push([dbname], [options]));
 });
 ```
-## Options
-`options.attachments` If you want to push not only the design document, but the _attachments of the App, specify the directory.
+This installs `app.js` in the specified `dbname`, or you can use a URL like `'http://domain.com/dbname'`.
+### Options
+- `scheme`: Defaults to `http`
+- `host`: Defaults to `127.0.0.1`
+- `port`: Defaults to `5984`
+- `auth.username + auth.password`: You can specify HTTP auth parameters either by using options or a URL like `'http://user:pass@host/dbname'`.
+- `attachments`: If you want to push not only the design document, but the _attachments of the App, specify the path to directory.
 
-`options.auth` If your CouchDB database requires authentication, specify the `auth.username` and `auth.password`.
-## Basic ddoc
-You should write your ddoc in the couchapp.js file.
+### Basic ddoc
+You should write your ddoc in the app.js file.
 ```
 var ddoc = {
   _id: '_design/myapp',
